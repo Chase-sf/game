@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://baiqmj4e1o0t3"]
+
+[ext_resource type="PackedScene" uid="uid://xuasrpogd4f8" path="res://Scenes/state machine test.tscn" id="1_ebmjs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebmjs"]
+size = Vector2(194, 20)
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_ebmjs")]
+position = Vector2(-1, -91)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ebmjs")
